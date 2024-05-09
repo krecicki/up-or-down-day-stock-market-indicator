@@ -1,5 +1,5 @@
 # up-or-down-day-stock-market-indicator
-Very simple 30 line brain dead simple indicator to predict if the market will go up or down for the day.
+Very simple 30 line brain dead simple indicator to predict if the market will go up or down for the day: if it is bullish, bearish or neutral. 
 
 # This script now considers the following
 If the VIX is down and SHY is up (implying lower interest rates) and DXY is down, it suggests a bullish sentiment.
