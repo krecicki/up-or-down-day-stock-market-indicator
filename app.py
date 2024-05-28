@@ -16,9 +16,9 @@ vix_data = yf.Ticker(vix_ticker)
 shy_data = yf.Ticker(shy_ticker)
 dxy_data = yf.Ticker(dxy_ticker)
 
-vix_hist = vix_data.history(period='2d')
-shy_hist = shy_data.history(period='2d')
-dxy_hist = dxy_data.history(period='2d')
+vix_hist = vix_data.history(period='5d')
+shy_hist = shy_data.history(period='5d')
+dxy_hist = dxy_data.history(period='5d')
 
 # Calculate the change in VIX, SHY, and DXY
 vix_change = vix_hist['Close'].iloc[-1] - vix_hist['Close'].iloc[-2]
@@ -37,9 +37,20 @@ print(dxy_change)
 # Determine if the day is bullish or bearish based on VIX, SHY, and DXY
 sentiment = 'Neutral'
 
-if vix_change < 0 and shy_change > 0 and dxy_change < 0:
+# Rule 1: If VIX goes down, dollar and bonds should generally go down
+if vix_change < 0 and (shy_change < 0 and dxy_change < 0):
     sentiment = 'Bullish'
-elif vix_change > 0 and shy_change < 0 and dxy_change > 0:
+
+# Rule 2: If VIX goes up, dollar and bonds should generally go up
+elif vix_change > 0 and (shy_change > 0 and dxy_change > 0):
     sentiment = 'Bearish'
+
+# Rule 3: Dollar and bonds should typically move in the same direction
+elif (shy_change > 0 and dxy_change < 0) or (shy_change < 0 and dxy_change > 0):
+    sentiment = 'Anomaly'
+
+# Rule 4: Big VIX move should lead to significant opposite move in dollar and bonds
+elif abs(vix_change) > 1 and ((vix_change > 0 and shy_change < 0 and dxy_change < 0) or (vix_change < 0 and shy_change > 0 and dxy_change > 0)):
+    sentiment = 'Anomaly'
 
 print(f'The market sentiment for the day is: {sentiment}')
