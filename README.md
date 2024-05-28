@@ -33,4 +33,4 @@ If the VIX is down (implying lower expected volatility), SHY is up (suggesting l
 Conversely, if the VIX is up (higher expected volatility), SHY is down (suggesting higher interest rates), and DXY is up (stronger U.S. dollar), it is considered a bearish sentiment for the stock market.
 
 # Google Colab 
-https://colab.research.google.com/drive/1zTCCwucSKpqHkzycc2_ELKiGdHEy9LKg?usp=sharing
+[https://colab.research.google.com/drive/1zTCCwucSKpqHkzycc2_ELKiGdHEy9LKg?usp=sharing](https://colab.research.google.com/drive/1zTCCwucSKpqHkzycc2_ELKiGdHEy9LKg?usp=sharing)
