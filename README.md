@@ -1,3 +1,13 @@
+# Accuracy
+We took 90 days of data for thre DXY, VIX, SPY and SHY.
+
+Out of the 62 total days where the sentiment could be evaluated against the next day's SPY movement:
+Bullish sentiment was correct 9 out of 12 times = 75% accurate
+Bearish sentiment was correct 11 out of 14 times = 78.6% accurate
+Neutral sentiment was correct 26 out of 33 times = 78.8% accurate
+Anomaly sentiment was correct 2 out of 3 times = 66.7% accurate
+Overall, the sentiment indicator was correct 48 out of the 62 days = 77.4% accurate
+
 # up-or-down-day-stock-market-indicator
 Very simple 30 line brain dead simple indicator to predict if the market will go up or down for the day: if it is bullish, bearish or neutral. 
 
