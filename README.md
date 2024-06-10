@@ -45,4 +45,4 @@ The DXY measures the value of the U.S. dollar against a basket of major currenci
 A declining DXY indicates a weakening U.S. dollar, which can be bullish for U.S. multinational companies and the stock market in general, as it makes their products and services more competitive in international markets.
 
 # Google Colab 
-[https://colab.research.google.com/drive/1zTCCwucSKpqHkzycc2_ELKiGdHEy9LKg?usp=sharing](https://colab.research.google.com/drive/1zTCCwucSKpqHkzycc2_ELKiGdHEy9LKg?usp=sharing)
+[https://colab.research.google.com/drive/1MhtzibjBbJEnDPQGPxY3vYT9hL9sb-LW?usp=sharing](https://colab.research.google.com/drive/1MhtzibjBbJEnDPQGPxY3vYT9hL9sb-LW?usp=sharing)
